@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
+:root{
+  --header-height: 80px;
+  --item-bg: rgba(58, 60, 77, 0.5);
+  --text-color: #A4A6B5;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Oswald', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +16,40 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container{
+  background-image: url("/public/bg.png");
+  
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(56, 60, 77, 42%);
+    backdrop-filter: blur(5px);
+  }
+
+  & .content{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 0 20px;
+  }
+}
+
+.loader{
+  &react-loading-skeleton{
+    background-color: var(--item-bg) !important;
+  }
 }

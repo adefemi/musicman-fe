@@ -1,0 +1,54 @@
+header {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+}
+
+.artist{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  .topSection{
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 3em;
+    margin-bottom: 50px;
+  }
+
+  & h1, & h2{
+    margin: 0;
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+
+  & .albumList{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  & .albumList{
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  & .topSection{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  & .albumCard{
+    max-width: 100% !important;
+  }
+
+  & .artist{
+    margin-top: 0;
+  }
+}
