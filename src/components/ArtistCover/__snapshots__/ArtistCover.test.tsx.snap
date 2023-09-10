@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistCover should render correctly while loading 1`] = `
+<div
+  data-testid="loader"
+>
+  <span
+    aria-busy={true}
+    aria-live="polite"
+  >
+    <span
+      className="react-loading-skeleton"
+      style={
+        {
+          "--base-color": "#3a3c4d80",
+          "--highlight-color": "#595c7780",
+          "height": 350,
+        }
+      }
+    >
+      ‌
+    </span>
+    <br />
+  </span>
+</div>
+`;
+
+exports[`ArtistCover should render correctly with data 1`] = `
+<div
+  className="artistCover"
+  data-testid="artistCover"
+  style={
+    {
+      "backgroundImage": "url(test-image-url.jpg)",
+    }
+  }
+>
+  <div
+    className="info"
+  >
+    <h1>
+      Test Artist
+    </h1>
+    <p>
+      <b>
+        123
+      </b>
+       Fans
+    </p>
+  </div>
+</div>
+`;

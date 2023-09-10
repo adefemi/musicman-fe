@@ -17,14 +17,17 @@ const ArtistCover = ({
 }) => {
   if (loading) {
     return (
-      <SkeletonTheme baseColor="#3a3c4d80" highlightColor="#595c7780">
-        <Skeleton height={350} />
-      </SkeletonTheme>
+      <div data-testid="loader">
+        <SkeletonTheme baseColor="#3a3c4d80" highlightColor="#595c7780">
+          <Skeleton height={350} />
+        </SkeletonTheme>
+      </div>
     );
   }
   return (
     <div
       className="artistCover"
+      data-testid="artistCover"
       style={{ backgroundImage: `url(${data?.picture_medium})` }}
     >
       <div className="info">
